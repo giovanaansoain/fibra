@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400")
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400");
 
 /*PADRÃO*/
 
@@ -9,7 +9,7 @@
 
 .linha {
 	display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .botao.transparente {
@@ -28,11 +28,11 @@ body {
 
 #header {
 	height: 64px;
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    /*border-bottom: 1px solid rgba(0,0,0,.0975);*/
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  /*border-bottom: 1px solid rgba(0,0,0,.0975);*/
 }
 
 #menu {
@@ -50,6 +50,12 @@ body {
 	text-indent: -999999999px;
 	margin: 0;
 	background-position: center;
+}
+
+#slider {
+	position: relative;
+  height: 250px;
+  overflow-y: hidden;
 }
 
 /*CLASS*/
@@ -73,15 +79,16 @@ body {
 .menu-hamburguer {
 	display: none;
 	background: white;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
 }
 
 .menu-hamburguer ul {
-	padding-left: 0;
-    list-style: none;
-	font-size: 1.2em;
+	padding: 24px;
+	margin: 0;
+  list-style: none;
+	font-size: 1.3em;
 	line-height: 3em;
 }
 
@@ -92,28 +99,50 @@ body {
 	font-weight: 300;
 }
 
+.menu-hamburguer li a:hover {
+	color: #e40523;
+}
+
 .divisor {
 	height: 1px;
 	width: 100%;
 	background-color: black;
-	border-bottom: solid 1px black;
+	margin: 19px 0;
 }
 
-.setas {
+.seta {
+	font-size: 1.5em;
+}
+
+.seta.esquerda {
 	position: absolute;
-    z-index: 9999;
+	top: 40%;
+}
+
+.seta.direita {
+	right: 0;
+	position: absolute;
+	top: 40%;
+}
+
+#slides {
+	height: 250px
 }
 
 .slides {
+	width: 100vw;
+	height: 100%;
 	position: relative;
+	width: 100%;
+	z-index: -1;
 }
 
-.slide {
+.slides a {
 	height: 100%;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	transition: all 1s ease;
-	/*opacity: 0;*/
+  width: 100%;
+  position: absolute;
+}
+
+.slides img {
+	max-width: 100vw;
 }
