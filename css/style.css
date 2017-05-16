@@ -7,15 +7,16 @@ body {
 	margin-top: 64px;
 	background-color: white;
   overflow-x: hidden;
+	color: #3c3c3b;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: #3c3c3b;
 }
 
 button {
-    outline: none;
+  outline: none;
 }
 
 .container {
@@ -167,7 +168,7 @@ i[class^="fa fa-angle"]:only-child {
 
 .menu-hamburguer li a {
 	text-decoration: none;
-	color: black;
+	color: #3c3c3b;
 	font-weight: 300;
 }
 
@@ -235,7 +236,8 @@ i[class^="fa fa-angle"]:only-child {
 
 .filtros p {
 	margin: 0;
-	font-size: 1.2em;
+	font-size: 1em;
+	font-weight: 300;
 }
 
 .filtros .botao.transparente {
