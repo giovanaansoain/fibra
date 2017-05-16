@@ -121,6 +121,9 @@ i[class^="fa fa-angle"]:only-child {
     height: 100%;
     width: 100vw;
     object-fit: cover;
+		position: relative;
+		z-index: 100;
+
 }
 
 #search {
@@ -190,6 +193,11 @@ i[class^="fa fa-angle"]:only-child {
   height: 250px;
 }
 
+.slide h2 {
+	font-size: 1.4em;
+  font-weight: 300;
+}
+
 .setas {
   position: absolute;
   top: 0;
@@ -246,7 +254,7 @@ i[class^="fa fa-angle"]:only-child {
 
 #colecoes h3,
 .colecao h4 {
-	font-size: 15px;
+	font-size: 1em;
 	font-weight: 200;
 }
 
