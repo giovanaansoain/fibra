@@ -1,11 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400");
 
 /*PADRÃO*/
+html {
+	background-color: #e40523;
+}
 
 body {
-	font-family: 'Source Sans Pro', sans-serif
-	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin-top: 64px;
+	background-color: white;
+  overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    outline: none;
 }
 
 .container {
@@ -63,6 +76,25 @@ i[class^="fa fa-angle"] {
 	background-position: center;
 }
 
+#slider {
+    position: relative;
+}
+
+#slides {
+    align-items: flex-start;
+    height: 300px;
+		text-align: center;
+		transform: translateX(0);
+		transition: transform .5s ease-in-out;
+}
+
+#slides img {
+    border-style: none;
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
+
 #search {
 	border: solid 1px #dadada;
 	border-radius: 4px;
@@ -117,6 +149,20 @@ i[class^="fa fa-angle"] {
 	width: 100%;
 	background-color: black;
 	margin: 19px 0;
+}
+
+.slide {
+    height: 250px;
+}
+
+.setas {
+    position: absolute;
+    top: 0;
+    height: 250px;
+    width: calc(100% - 32px);
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .busca-escrita {
