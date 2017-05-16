@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400")
+
+/*PADRÃO*/
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.linha {
+	display: flex;
+    align-items: center;
+}
+
+.botao.transparente {
+	background: none;
+	border: none;
+}
+
+/*TAG*/
+
+body {
+	margin: 0;
+	margin-top: 64px;
+}
+
+/*ID*/
+
+#header {
+	height: 64px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    /*border-bottom: 1px solid rgba(0,0,0,.0975);*/
+}
+
+#menu {
+	position: absolute;
+}
+
+#logo {
+	flex-grow: 1;
+}
+
+#logo h1 {
+	height: 50px;
+	background: url("../img/logo.svg") no-repeat;
+	overflow: hidden;
+	text-indent: -999999999px;
+	margin: 0;
+	background-position: center;
+}
+
+/*CLASS*/
+
+.topo {
+	height: 64px;
+}
+
+.botao.transparente img {
+	height: 34px;
+}
+
+.abrir-menu {
+	padding: 10px 24px;
+}
+
+.fechar-menu {
+	display: none;
+}
+
+.menu-hamburguer {
+	display: none;
+	background: white;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.menu-hamburguer ul {
+	padding-left: 0;
+    list-style: none;
+	font-size: 1.2em;
+	line-height: 3em;
+}
+
+.menu-hamburguer li a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+
+.divisor {
+	height: 1px;
+	width: 100%;
+	background-color: black;
+	border-bottom: solid 1px black;
+}
+
+.setas {
+	position: absolute;
+    z-index: 9999;
+}
+
+.slides {
+	position: relative;
+}
+
+.slide {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 1s ease;
+	/*opacity: 0;*/
+}
