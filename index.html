@@ -24,7 +24,7 @@
 							<li><a href="#">Cadastre-se</a></li>
 							<li><a href="#">Entre</a></li>
 							<li><a href="#">Venda</a></li>
-							<div class="divisor"></div>
+							<div class="divisor menu"></div>
 							<li><a href="#">Ajuda</a></li>
 							<li><a href="#">Contato</a></li>
 							<li><a href="#">Sobre</a></li>
@@ -41,19 +41,19 @@
 	<section id="slider">
 
 			<div id="slides" class="linha">
-				<div class="slide">
+				<div class="slide active" data-slide=0>
 					<a href="#">
 						<img src="img/slide1.jpg">
 						<h2>Título do slide</h2>
 					</a>
 				</div>
-				<div class="slide">
+				<div class="slide" data-slide=1>
 					<a href="#">
 						<img src="img/slide2.jpg">
 						<h2>Título do slide</h2>
 					</a>
 				</div>
-				<div class="slide">
+				<div class="slide" data-slide=2>
 					<a href="#">
 						<img src="img/slide3.jpg">
 						<h2>Título do slide</h2>
@@ -98,27 +98,35 @@
 		</div>
 	</section>
 
-	<span class="divisor container"></span>
+	<div class="divisor secao container"></div>
 
 	<section id="colecoes" class="container">
 		<h3>COLEÇÕES</h3>
 		<div class="colecao">
-			<h4>Título da coleção</h4>
-			<a href="#">Ver mais<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			<div class="linha space-between">
+				<h4>Título da coleção</h4>
+				<a href="#" class="align-center">Ver mais<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			</div>
 			<img src="img/colecao1.jpg">
 		</div>
 		<div class="colecao">
-			<h4>Título da coleção</h4>
-			<a href="#">Ver mais<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-			<img src="img/colecao1.jpg">
+			<div class="linha space-between">
+				<h4>Título da coleção</h4>
+				<a href="#" class="align-center">Ver mais<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			</div>
+			<img src="img/colecao2.jpg">
 		</div>
 		<button class="botao inteiro carregar-mais">VER MAIS</button>
 	</section>
 
-	<footer id="footer">
-		<div class="redes-sociais">
-			<i class="fa fa-facebook" aria-hidden="true"></i>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
+	<footer id="footer" class="align-center">
+		<div class="container redes-sociais align-center space-between">
+			<a href="#">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+			</a>
+			<a href="#">
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+			</a>
 		</div>
 	</footer>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>

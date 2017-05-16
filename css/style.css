@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400");
 
 /*PADRÃO*/
-html {
-	background-color: #e40523;
-}
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -36,14 +33,44 @@ button {
 	justify-content: space-between;
 }
 
+.align-center {
+	display: flex;
+	align-items: center;
+}
+
 .botao.transparente {
 	background: none;
 	border: none;
 }
 
+.fa {
+	font-size: 1.2em;
+}
+
+.botao.inteiro {
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	background: none;
+	border: solid 1px #9d9d9c;
+	border-radius: 4px;
+	color: #9d9d9c;
+	margin: 20px 0;
+}
+
+.botao.inteiro:hover {
+	border: solid 1px #e40523;
+	color: #e40523;
+}
+
 i[class^="fa fa-angle"] {
 	font-size: 1.5em;
+	margin: 0 10px;
 }
+/*
+i[class^="fa fa-angle"]:only-child {
+	margin: 0;
+}*/
 
 /*TAG*/
 
@@ -57,6 +84,7 @@ i[class^="fa fa-angle"] {
   left: 0;
 	background: white;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 #menu {
@@ -146,23 +174,30 @@ i[class^="fa fa-angle"] {
 
 .divisor {
 	height: 1px;
-	width: 100%;
-	background-color: black;
+	background-color: #c6c6c6;
+}
+
+.divisor.menu {
 	margin: 19px 0;
 }
 
+.divisor.secao {
+	margin-top: 32px;
+  margin-bottom: 32px;
+}
+
 .slide {
-    height: 250px;
+  height: 250px;
 }
 
 .setas {
-    position: absolute;
-    top: 0;
-    height: 250px;
-    width: calc(100% - 32px);
-    padding: 0 16px;
-    display: flex;
-    justify-content: space-between;
+  position: absolute;
+  top: 0;
+  height: 250px;
+  width: calc(100% - 32px);
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .busca-escrita {
@@ -174,6 +209,7 @@ i[class^="fa fa-angle"] {
 .busca-escrita span {
 	position: absolute;
 	color: #b2b2b2;
+	top: 33%;
 }
 
 .busca-escrita input {
@@ -192,4 +228,54 @@ i[class^="fa fa-angle"] {
 .filtros p {
 	margin: 0;
 	font-size: 1.2em;
+}
+
+.filtros .botao.transparente {
+	border-right: solid 1px #dadada;
+	padding: 12px 10px 12px 0;
+}
+
+.filtros .botao.transparente:last-child {
+	border-right: none;
+	padding: 12px 0 12px 0;
+}
+
+#colecoes h3 {
+	text-align: center;
+}
+
+#colecoes h3,
+.colecao h4 {
+	font-size: 15px;
+	font-weight: 200;
+}
+
+.colecao a {
+	font-size: 14px;
+	font-weight: 200;
+}
+
+.colecao i {
+	margin-left: 5px;
+}
+
+.colecao img {
+  max-width: 100%;
+}
+
+#footer {
+	height: 64px;
+	box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.redes-sociais {
+	width: 20%;
+}
+
+.redes-sociais a {
+	color: #e40523;
+}
+
+.redes-sociais a:hover {
+	color: #c6c6c6;
 }
