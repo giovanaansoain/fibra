@@ -10,6 +10,11 @@ body {
 	color: #3c3c3b;
 }
 
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
 a {
   text-decoration: none;
   color: #3c3c3b;
@@ -45,7 +50,7 @@ button {
 }
 
 .fa {
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 .botao.inteiro {
@@ -68,10 +73,6 @@ i[class^="fa fa-angle"] {
 	font-size: 1.5em;
 	margin: 0 10px;
 }
-/*
-i[class^="fa fa-angle"]:only-child {
-	margin: 0;
-}*/
 
 /*TAG*/
 
@@ -209,6 +210,35 @@ i[class^="fa fa-angle"]:only-child {
   justify-content: space-between;
 }
 
+.seta i {
+	color: white;
+}
+
+.seta.direita i {
+    text-shadow: -1px 0px 7px #1d1d1b;
+}
+
+.seta.esquerda i {
+    text-shadow: 1px 0px 7px #1d1d1b;
+}
+
+.bullets ul {
+    justify-content: center;
+    margin: 16px 0 32px 0;
+}
+
+.bullets .bullet {
+    height: 6px;
+    width: 6px;
+    background-color: #c6c6c6;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.bullets .bullet.active {
+    background-color: #e40523;
+}
+
 .busca-escrita {
 	border-bottom: solid 1px #dadada;
 	padding: 15px;
@@ -225,7 +255,7 @@ i[class^="fa fa-angle"]:only-child {
 	border: none;
   text-align: center;
   width: 100%;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 300;
 }
 
@@ -238,11 +268,15 @@ i[class^="fa fa-angle"]:only-child {
 	margin: 0;
 	font-size: 1em;
 	font-weight: 300;
+	width: 100%;
+    text-align: center;
 }
 
 .filtros .botao.transparente {
 	border-right: solid 1px #dadada;
 	padding: 12px 10px 12px 0;
+    width: 100%;
+    margin-right: 10px;
 }
 
 .filtros .botao.transparente:last-child {

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
   var slideDiv = $("#slides");
   var slides = $(".slide");
   var slidesLength = slides.length;
@@ -9,7 +11,7 @@ $(document).ready(function(){
   function mudarSlide(evento){
     var direcaoSeta = evento.currentTarget.classList[3];
     var slideAtivo = $(".active");
-    var dataSlideAtivo = parseInt(slideAtivo["0"].dataset.slide);
+    var dataSlideAtivo = parseInt($(".active")["0"].dataset.slide);
 
     if (direcaoSeta == "direita") {
       if (dataSlideAtivo >= slidesLength-1) {
@@ -31,8 +33,33 @@ $(document).ready(function(){
       $("[data-slide=" + slideSeguinte + "]").addClass("active");
     }
 
+    bulletIrParaSlide();
+  }
 
+
+
+  var slider = $("#slider");
+
+  if(slider != null){
+    criaBullets();
+
+    function criaBullets(){
+      for (var i = 0; i < slidesLength; i++) {
+        criarUmBullet(i);
+      }
+
+      function criarUmBullet(numeroSlides){
+        $(".bullets ul").append("<li class='bullet'><button class='botao transparente'></button></li>");
+        $(".bullets li").eq(0).addClass("active");
+      }
+    }
+    
+    function bulletIrParaSlide(){
+      var dataSlideAtivo = parseInt($(".active")["0"].dataset.slide);
+      $(".bullets li").eq(dataSlideAtivo).addClass("active");
+    }
 
   }
+
 
 });
