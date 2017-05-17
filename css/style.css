@@ -75,7 +75,6 @@ button {
 
 i[class^="fa fa-angle"] {
 	font-size: 1.5em;
-	margin: 0 10px;
 }
 
 /*TAG*/
@@ -265,50 +264,53 @@ i[class^="fa fa-angle"] {
 
 .busca-escrita input {
 	border: none;
-  text-align: center;
-  width: 100%;
-  font-size: 1em;
-  font-weight: 300;
+	text-align: center;
+	width: 100%;
+	font-size: 1em;
+	font-weight: 300;
 }
 
 .filtros {
-	height: 17px;
-  padding: 15px;
+    height: 50px;
+    justify-content: space-between;
 }
 
 .filtros p {
-	margin: 0;
 	font-size: 1em;
 	font-weight: 300;
-	width: 100%;
-    text-align: center;
 }
 
 .filtros .botao.transparente {
-	border-right: solid 1px #dadada;
-	padding: 12px 10px 12px 0;
-    width: 100%;
-    margin-right: 10px;
+    width: 33%;
+    justify-content: center;
+    padding: 0;
+    border-right: solid 1px #dadada;
 }
 
 .filtros .botao.transparente:last-child {
-	border-right: none;
-	padding: 12px 0 12px 0;
+    border-right: none;
+}
+
+.filtros i,
+.colecao i {
+	color: #3c3c3b;
+	margin-left: 10px;
+	color: #575756;
+}
+
+#colecoes h3,
+.colecao h4 {
+	font-size: 1em;
+	font-weight: 300;
 }
 
 #colecoes h3 {
 	text-align: center;
 }
 
-#colecoes h3,
-.colecao h4 {
-	font-size: 1em;
-	font-weight: 200;
-}
-
 .colecao a {
 	font-size: 14px;
-	font-weight: 200;
+	font-weight: 300;
 }
 
 .colecao i {
@@ -325,7 +327,7 @@ i[class^="fa fa-angle"] {
 }
 
 .redes-sociais {
-	width: 20%;
+    max-width: 70px;
 }
 
 .redes-sociais a {
