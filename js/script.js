@@ -1,42 +1,52 @@
 $(document).ready(function(){
 
+  var botaoAbrirFecharMenu = $(".botao.abrir-fechar-menu");
+  var menuHamburguer = $(".menu-hamburguer");
+  var imgBotao = $(".botao.abrir-fechar-menu img");
+
+  botaoAbrirFecharMenu.click(abrirFecharMenu);
+
+  function abrirFecharMenu(){
+    menuHamburguer.toggleClass("ativo");
+    imgBotao.toggleClass("ativo");
+  }
 
 
   var slideDiv = $("#slides");
   var slides = $(".slide");
   var slidesLength = slides.length;
 
-  $(".seta").click(mudarSlide);
 
-  function mudarSlide(evento){
-    var direcaoSeta = evento.currentTarget.classList[3];
-    var slideAtivo = $(".active");
+  $('.seta.direita').click(avancarSlide);
+  function avancarSlide(evento) {
     var dataSlideAtivo = parseInt($(".active")["0"].dataset.slide);
-
-    if (direcaoSeta == "direita") {
-      if (dataSlideAtivo >= slidesLength-1) {
-        translateSlide(0);
-      } else {
-        translateSlide(dataSlideAtivo+1);
-      }
+    if (dataSlideAtivo >= slidesLength-1) {
+      mudarSlide(0);
     } else {
-      if(dataSlideAtivo <= 0){
-        translateSlide(slidesLength-1);
-      } else {
-        translateSlide(dataSlideAtivo-1);
-      }
+      mudarSlide(dataSlideAtivo+1);
     }
+  }
 
-    function translateSlide(slideSeguinte){
-      slideDiv.css("transform", "translateX(-" + slideSeguinte + "00vw)");
-      slideAtivo.removeClass("active");
-      $("[data-slide=" + slideSeguinte + "]").addClass("active");
+  $('.seta.esquerda').click(voltarSlide);
+  function voltarSlide(evento) {
+    var dataSlideAtivo = parseInt($(".active")["0"].dataset.slide);
+    if(dataSlideAtivo <= 0){
+      mudarSlide(slidesLength-1);
+    } else {
+      mudarSlide(dataSlideAtivo-1);
     }
-
-    bulletIrParaSlide();
   }
 
 
+  function mudarSlide(slideSeguinte){
+    var slideAtivo = $(".active");
+
+    slideDiv.css("transform", "translateX(-" + slideSeguinte + "00vw)");
+    slideAtivo.removeClass("active");
+    $("[data-slide=" + slideSeguinte + "]").addClass("active");
+
+    ativarBullet();
+  }
 
   var slider = $("#slider");
 
@@ -49,12 +59,18 @@ $(document).ready(function(){
       }
 
       function criarUmBullet(numeroSlides){
-        $(".bullets ul").append("<li class='bullet'><button class='botao transparente'></button></li>");
+        $(".bullets ul")
+          .append("<li class='bullet'><button class='botao transparente'></button></li>");
         $(".bullets li").eq(0).addClass("active");
       }
+
+      $('.bullets ul li').click(function() {
+        var slideSeguinte = $(this).index();
+        mudarSlide(slideSeguinte);
+      });
     }
     
-    function bulletIrParaSlide(){
+    function ativarBullet(){
       var dataSlideAtivo = parseInt($(".active")["0"].dataset.slide);
       $(".bullets li").eq(dataSlideAtivo).addClass("active");
     }
