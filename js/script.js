@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   var botaoAbrirFecharMenu = $(".botao.abrir-fechar-menu");
   var menuHamburguer = $(".menu-hamburguer");
+  var backgroungMenu = $(".bg-branco");
   var imgBotao = $(".botao.abrir-fechar-menu img");
 
   botaoAbrirFecharMenu.click(abrirFecharMenu);
@@ -9,6 +10,7 @@ $(document).ready(function(){
   function abrirFecharMenu(){
     menuHamburguer.toggleClass("ativo");
     imgBotao.toggleClass("ativo");
+    backgroungMenu.toggleClass("ativo");
   }
 
 
@@ -84,6 +86,7 @@ $(document).ready(function(){
     $("#header .topo").addClass("container");
     $("#slider").addClass("container").css("overflow-x","hidden");
     $(".slide").css("width","100%");
+    $(".redes-sociais").removeClass("container");
   }
 
 

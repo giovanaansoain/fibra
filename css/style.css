@@ -59,6 +59,8 @@ button {
 }
 
 .botao.inteiro {
+	font-size: 1em;
+	font-weight: 300;
 	width: 100%;
 	height: auto;
 	padding: 10px;
@@ -148,6 +150,11 @@ i[class^="fa fa-angle"] {
 	margin-top: 64px;
 }
 
+#footer a:hover {
+	color: #e40523;
+	/*font-weight: 400;*/
+}
+
 /*CLASS*/
 
 .topo {
@@ -158,10 +165,6 @@ i[class^="fa fa-angle"] {
 .botao.transparente img {
 	height: 34px;
 }
-
-/*.abrir-fechar-menu {
-	padding: 10px 24px;
-}*/
 
 .abrir-fechar-menu > img.ativo {
 	display: block;
@@ -177,14 +180,16 @@ i[class^="fa fa-angle"] {
 
 .menu-hamburguer.ativo {
 	display: block;
-	background: white;
+	/*background: white;*/
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
+    top: 64px;
+    z-index: 999;
 }
 
 .menu-hamburguer ul {
-	padding: 24px;
+	/*padding: 24px;*/
 	margin: 0;
 	list-style: none;
 	font-size: 1.3em;
@@ -193,24 +198,38 @@ i[class^="fa fa-angle"] {
 
 .menu-hamburguer li a {
 	font-weight: 300;
+	padding: 10px 70% 10px 0;
 }
 
 .menu-hamburguer li a:hover {
 	color: #e40523;
 }
 
-.divisor {
+.divisor.menu {
+	margin: 16px 0;
+    width: 90%;
 	height: 1px;
 	background-color: #c6c6c6;
-}
-
-.divisor.menu {
-    margin: 19px 24px;
 }
 
 .divisor.secao {
 	margin-top: 32px;
 	margin-bottom: 32px;
+	width: 90%;
+	height: 1px;
+	background-color: #c6c6c6;
+}
+
+.bg-branco {
+	display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+}
+
+.bg-branco.ativo {
+	display: block;
 }
 
 .slide {
@@ -279,6 +298,11 @@ i[class^="fa fa-angle"] {
 	width: 100%;
 	font-size: 1em;
 	font-weight: 300;
+	color: #9d9d9c;
+}
+
+.busca-escrita input::placeholder {
+	color: #9d9d9c;
 }
 
 .filtros {
@@ -296,6 +320,7 @@ i[class^="fa fa-angle"] {
     justify-content: center;
     padding: 0;
     border-right: solid 1px #dadada;
+    color: #9d9d9c;
 }
 
 .filtros .botao.transparente:last-child {
@@ -304,18 +329,17 @@ i[class^="fa fa-angle"] {
 
 .filtros i,
 .colecao i {
-	color: #3c3c3b;
 	margin-left: 10px;
-	color: #575756;
+	color: #9d9d9c;
 }
 
-#colecoes h3,
+#secao-colecoes h3,
 .colecao h4 {
 	font-size: 1em;
 	font-weight: 300;
 }
 
-#colecoes h3 {
+#secao-colecoes h3 {
 	text-align: center;
 }
 
@@ -330,8 +354,9 @@ i[class^="fa fa-angle"] {
 }
 
 .colecao img {
-  max-width: 100%;
-  object-fit: contain;
+	width: 575px;
+    height: 575px;
+    object-fit: cover;
 }
 
 .redes-sociais {
@@ -339,11 +364,7 @@ i[class^="fa fa-angle"] {
 }
 
 .redes-sociais a {
-	color: #e40523;
-}
-
-.redes-sociais a:hover {
-	color: #c6c6c6;
+	color: #b2b2b2;
 }
 
 /*SMARTPHONES MINIS*/
@@ -353,14 +374,6 @@ i[class^="fa fa-angle"] {
 
 /*TABLETS*/
 @media screen and (min-width: 768px){
-
-	/*.abrir-fechar-menu {
-	    padding: 10px 37.406px;
-	}*/
-
-	.menu-hamburguer ul {
-	    padding: 37.406px;
-	}
 
 	.menu-hamburguer li a {
 		font-size: 1.375em;
@@ -437,7 +450,7 @@ i[class^="fa fa-angle"] {
 		margin: 0;
 	}
 
-	#colecoes h3,
+	#secao-colecoes h3,
 	.colecao h4 {
 		font-size: 1.375em;
 	}
@@ -450,7 +463,8 @@ i[class^="fa fa-angle"] {
 		margin-left: 10px;
 	}
 
-	button.botao.inteiro.carregar-mais {
+	.botao.inteiro {
+		font-size: 1.188em;
 		height: 50px;
 	}
 
@@ -465,6 +479,10 @@ i[class^="fa fa-angle"] {
 }
 
 @media screen and (min-width: 960px){
+
+	body {
+	    margin-top: 136px;
+	}
 
 	.container {
 		max-width: 1200px;
@@ -498,15 +516,63 @@ i[class^="fa fa-angle"] {
 		display: none;
 	}
 
-	#menu-footer {
-		display: block;
-	}
-
 	.divisor.menu {
 		display: none;
 	}
 
 	#logo {
 	    flex-grow: 0;
+	}
+
+	.bullets ul {
+		margin: 48px 0 96px 0;
+	}
+
+	.divisor.secao {
+        margin-top: 96px;
+	    margin-bottom: 48px;
+	}
+
+	.colecoes {
+		display: flex;
+		justify-content: space-between;
+	    flex-wrap: wrap;
+	}
+
+	.colecao {
+		width: 48%;
+	}
+
+	.imagem-colecao {
+	    height: 575px;
+	    overflow: hidden;
+        display: flex;
+	    align-items: center;
+	}
+
+	.botao.inteiro {
+	    width: 250px;
+	    display: block;
+	    margin: 48px auto 0;
+		height: 50px;
+	}
+
+	#menu-footer {
+		display: flex;
+	}
+
+	#menu-footer a {
+	    padding: 10px;
+		margin: 10px;
+	    font-size: 1.1em;
+	    font-weight: 300;
+	}
+
+	.redes-sociais {
+		max-width: 120px;
+	}
+
+	.redes-sociais a {
+		padding: 20px;
 	}
 }
