@@ -40,8 +40,11 @@ $(document).ready(function(){
 
   function mudarSlide(slideSeguinte){
     var slideAtivo = $(".active");
-
-    slideDiv.css("transform", "translateX(-" + slideSeguinte + "00vw)");
+    if ($(window).width() > 960) {
+      slideDiv.css("transform", "translateX(-" + slideSeguinte + "00%)");
+    } else {
+      slideDiv.css("transform", "translateX(-" + slideSeguinte + "00vw)");
+    }
     slideAtivo.removeClass("active");
     $("[data-slide=" + slideSeguinte + "]").addClass("active");
 
@@ -75,6 +78,12 @@ $(document).ready(function(){
       $(".bullets li").eq(dataSlideAtivo).addClass("active");
     }
 
+  }
+
+  if ($(window).width() > 960) {
+    $("#header .topo").addClass("container");
+    $("#slider").addClass("container").css("overflow-x","hidden");
+    $(".slide").css("width","100%");
   }
 
 

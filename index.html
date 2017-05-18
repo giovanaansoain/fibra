@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header id="header">
-		<div class="topo linha">
+		<div class="topo linha container">
 			<div id="menu">
 				<button class="botao transparente abrir-fechar-menu">
 					<img class="ativo" src="img/icone/nav-bar.svg">
@@ -19,11 +19,13 @@
 				</button>
 				
 				<nav class="menu-hamburguer">
-						<ul>
+						<ul id="menu-usuario">
 							<li><a href="#">Cadastre-se</a></li>
 							<li><a href="#">Entre</a></li>
 							<li><a href="#">Venda</a></li>
+						</ul>
 							<div class="divisor menu"></div>
+						<ul id="menu-ajuda">
 							<li><a href="#">Ajuda</a></li>
 							<li><a href="#">Contato</a></li>
 							<li><a href="#">Sobre</a></li>
@@ -127,7 +129,14 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</a>
 		</div>
+
+		<ul id="menu-footer">
+			<li><a href="#">Ajuda</a></li>
+			<li><a href="#">Contato</a></li>
+			<li><a href="#">Sobre</a></li>
+		</ul>
 	</footer>
+
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
