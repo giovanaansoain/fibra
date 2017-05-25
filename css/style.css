@@ -142,6 +142,11 @@ i[class^="fa fa-angle"] {
 	margin: 32px auto;
 }
 
+#tecidos a {
+	width: 100%;
+	height: 100%;
+}
+
 #menu-footer {
 	display: none;
 }
@@ -426,6 +431,10 @@ i[class^="fa fa-angle"] {
     object-fit: cover;
 }
 
+.tecido {
+  margin-top: 30px;
+}
+
 .tecido img {
 	width: 100%;
   object-fit: contain;
@@ -450,23 +459,19 @@ i[class^="fa fa-angle"] {
   align-items: center;
 }
 
-.tecido .informacoes h2 {
-	font-size: 0.938em;
+.tecido .informacoes h2,
+.tecido .preco p {
+	font-size: 1em;
 	font-weight: 400;
 }
 
 .tecido .especificacoes p {
-	font-size: 0.875em;
+	font-size: 0.938em;
 	font-weight: 300;
 }
 
-.tecido .preco p {
-	font-size: 0.938em;
-	font-weight: 400;
-}
-
 .redes-sociais {
-    max-width: 70px;
+  max-width: 70px;
 }
 
 .redes-sociais a {
