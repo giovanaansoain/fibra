@@ -297,6 +297,7 @@ i[class^="fa fa-angle"] {
 	position: absolute;
 	color: #b2b2b2;
 	top: 33%;
+  margin-left: 5%;
 }
 
 .busca-escrita button {
@@ -525,9 +526,10 @@ i[class^="fa fa-angle"] {
 	}
 
 	#search {
-	    display: flex;
-        font-size: 1.2em;
-        height: 50px;
+    display: flex;
+    font-size: 1.2em;
+    height: 50px;
+    margin: 42px auto;
 	}
 
 	.busca-escrita {
@@ -541,8 +543,8 @@ i[class^="fa fa-angle"] {
 	}
 
 	.busca-escrita span {
-	    margin-left: 34px;
-        top: 30%;
+    margin-left: 5%;
+    top: 25%;
 	}
 
 	.busca-escrita i {
@@ -572,6 +574,23 @@ i[class^="fa fa-angle"] {
 
 	.colecao i {
 		margin-left: 10px;
+	}
+
+	.tecido .foto {
+    height: 480px;
+	}
+
+	.tecido img {
+		object-fit: cover;
+    height: 100%;
+	}
+
+	.tecido .informacoes h2, .tecido .preco p {
+    font-size: 1.375em;
+	}
+
+	.tecido .especificacoes p {
+    font-size: 1.250em;
 	}
 
 	.botao.inteiro {
