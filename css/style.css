@@ -113,7 +113,8 @@ i[class^="fa fa-angle"] {
 }
 
 #slider {
-    position: relative;
+  position: relative;
+	overflow-y: hidden;
 }
 
 #slides {
@@ -469,6 +470,8 @@ i[class^="fa fa-angle"] {
 .tecido .especificacoes p {
 	font-size: 0.938em;
 	font-weight: 300;
+	color: #808080;
+	margin-top: 5px;
 }
 
 .redes-sociais {
@@ -590,7 +593,7 @@ i[class^="fa fa-angle"] {
 	}
 
 	.tecido .especificacoes p {
-    font-size: 1.250em;
+    font-size: 1.125em;
 	}
 
 	.botao.inteiro {
@@ -610,8 +613,8 @@ i[class^="fa fa-angle"] {
 
 @media screen and (min-width: 960px){
 
-	body {
-	    margin-top: 136px;
+	#slider {
+    margin-top: 50px;
 	}
 
 	.container {
@@ -687,10 +690,11 @@ i[class^="fa fa-angle"] {
 	}
 
 	.botao.inteiro {
-	    width: 250px;
-	    display: block;
-	    margin: 48px auto 0;
-		height: 50px;
+    width: 250px;
+    display: block;
+    margin: 48px auto 0;
+		height: 40px;
+		font-size: 0.938em;
 	}
 
 	#menu-footer {
@@ -702,6 +706,20 @@ i[class^="fa fa-angle"] {
 		margin: 10px;
 	    font-size: 1.1em;
 	    font-weight: 300;
+	}
+
+	#tecidos {
+		display: flex;
+    flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#tecidos a {
+	  width: 48%;
+	}
+
+	.tecido .foto {
+    height: 300px;
 	}
 
 	.redes-sociais {
