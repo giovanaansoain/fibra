@@ -13,6 +13,14 @@ $(document).ready(function(){
     backgroungMenu.toggleClass("ativo");
   }
 
+  var botaoPopupBusca = $(".busca-escrita button");
+  var popupBusca = $(".popup");
+
+  botaoPopupBusca.click(abrirBusca);
+
+  function abrirBusca() {
+    // popupBusca.toggleClass("ativo");
+  }
 
   var slideDiv = $("#slides");
   var slides = $(".slide");
@@ -74,7 +82,7 @@ $(document).ready(function(){
         mudarSlide(slideSeguinte);
       });
     }
-    
+
     function ativarBullet(){
       var dataSlideAtivo = parseInt($(".active")["0"].dataset.slide);
       $(".bullets li").eq(dataSlideAtivo).addClass("active");
