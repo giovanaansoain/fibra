@@ -66,9 +66,9 @@ button {
 	padding: 10px;
 	background: none;
 	border: solid 1px #9d9d9c;
-	border-radius: 4px;
+  border-radius: 50px;
 	color: #9d9d9c;
-    margin: 32px 0 0 0;
+  margin: 32px 0 0 0;
 }
 
 .botao.inteiro:hover {
@@ -310,6 +310,10 @@ i[class^="fa fa-angle"] {
 	width: 100%;
 }
 
+.busca-escrita input {
+	display: none;
+}
+
 .filtros {
     height: 50px;
     justify-content: space-between;
@@ -405,6 +409,16 @@ i[class^="fa fa-angle"] {
 .opcao span {
   font-weight: 300;
 	margin-left: 5px;
+}
+
+.popup .cores .botao.transparente {
+	width: 35px;
+  height: 35px;
+  background: rgba(238, 238, 238, 0.2);
+  border-radius: 45px;
+	margin-left: 10px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
+	border-bottom: 1px solid #e4e4e4;
 }
 
 #secao-colecoes h3,
@@ -613,8 +627,20 @@ i[class^="fa fa-angle"] {
 
 @media screen and (min-width: 960px){
 
-	#slider {
+	/*#slider {
     margin-top: 50px;
+	}*/
+
+	#slides {
+		height: 420px;
+	}
+
+	.slide {
+		height: 350px;
+	}
+
+	.setas {
+    height: 350px;
 	}
 
 	.container {
@@ -664,6 +690,27 @@ i[class^="fa fa-angle"] {
 	.divisor.secao {
         margin-top: 96px;
 	    margin-bottom: 48px;
+	}
+
+	.busca-escrita button {
+    display: none;
+	}
+
+	.busca-escrita input {
+		display: block;
+    font-size: 0.8em;
+		width: 80%;
+    margin: auto;
+    text-align: center;
+		color: #9d9d9c;
+	}
+
+	.busca-escrita input::placeholder {
+		color: #9d9d9c;
+	}
+
+	.filtros p {
+    font-size: 0.8em;
 	}
 
 	.colecoes {
