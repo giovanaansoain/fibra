@@ -41,24 +41,31 @@ $(document).ready(function(){
     botaoAddMedida[i].onclick = identificarMedidaAtual;
   }
 
+  for (var i = 0; i < botaoRemoveMedida.length; i++) {
+    botaoRemoveMedida[i].onclick = identificarMedidaAtual;
+  }
+
   function identificarMedidaAtual(){
     var divBotaoAddClicado = this.parentNode;
     var spanAtual = divBotaoAddClicado.querySelector("span.medida");
     var medidaAtual = parseInt(spanAtual.innerText);
-    addMedida();
+
+    if (this == botaoAddMedida["0"] || this == botaoAddMedida["1"]) {
+      addMedida();
+    } else {
+      removeMedida();
+    }
 
     function addMedida() {
       somarMedida = medidaAtual+1;
       spanAtual.innerText = somarMedida;
     }
+
+    function removeMedida(){
+      subtrairMedida = medidaAtual-1;
+      spanAtual.innerText = subtrairMedida;
+    }
   }
-
-  botaoRemoveMedida.onclick = removeMedida;
-
-  function removeMedida() {
-
-  }
-
 
 
   var slideDiv = $("#slides");
