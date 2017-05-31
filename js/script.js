@@ -33,6 +33,33 @@ $(document).ready(function(){
     popup.classList.remove("ativo");
   }
 
+  var medidaFiltro = document.querySelectorAll(".opcao span.medida");
+  var botaoAddMedida = document.querySelectorAll("button.add-medida");
+  var botaoRemoveMedida = document.querySelectorAll("button.remove-medida");
+
+  for (var i = 0; i < botaoAddMedida.length; i++) {
+    botaoAddMedida[i].onclick = identificarMedidaAtual;
+  }
+
+  function identificarMedidaAtual(){
+    var divBotaoAddClicado = this.parentNode;
+    var spanAtual = divBotaoAddClicado.querySelector("span.medida");
+    var medidaAtual = parseInt(spanAtual.innerText);
+    addMedida();
+
+    function addMedida() {
+      somarMedida = medidaAtual+1;
+      spanAtual.innerText = somarMedida;
+    }
+  }
+
+  botaoRemoveMedida.onclick = removeMedida;
+
+  function removeMedida() {
+
+  }
+
+
 
   var slideDiv = $("#slides");
   var slides = $(".slide");
