@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  // ABRIR E FECHAR MENU
+
   var botaoAbrirFecharMenu = $(".botao.abrir-fechar-menu");
   var menuHamburguer = $(".menu-hamburguer");
   var backgroungMenu = $(".bg-branco");
@@ -13,6 +15,7 @@ $(document).ready(function(){
     backgroungMenu.toggleClass("ativo");
   }
 
+  // ABRIR POPUP DE BUSCA
 
   var botaoBusca = document.querySelectorAll("#search button");
   var popup = document.querySelector(".popup");
@@ -25,6 +28,8 @@ $(document).ready(function(){
     popup.classList.add("ativo");
   }
 
+  // FECHAR POPUP DE BUSCA
+
   var botaoFecharBusca = $(".fechar-popup");
 
   botaoFecharBusca.click(fecharPopup);
@@ -32,6 +37,8 @@ $(document).ready(function(){
   function fecharPopup() {
     popup.classList.remove("ativo");
   }
+
+  // ADD OU REMOVER MEDIDAS DE BUSCA
 
   var medidaFiltro = document.querySelectorAll(".opcao span.medida");
   var botaoAddMedida = document.querySelectorAll("button.add-medida");
@@ -53,7 +60,9 @@ $(document).ready(function(){
     if (this == botaoAddMedida["0"] || this == botaoAddMedida["1"]) {
       addMedida();
     } else {
-      removeMedida();
+      if (medidaAtual > 1) {
+        removeMedida();
+      }
     }
 
     function addMedida() {
@@ -67,6 +76,7 @@ $(document).ready(function(){
     }
   }
 
+  // AVANÇAR E VOLTAR SLIDE
 
   var slideDiv = $("#slides");
   var slides = $(".slide");
@@ -135,6 +145,8 @@ $(document).ready(function(){
     }
 
   }
+
+  // PARA DESKTOP
 
   if ($(window).width() > 960) {
     $("#header .topo").addClass("container");

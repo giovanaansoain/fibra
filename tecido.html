@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibra tecidos</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="theme-color" content="#e40523">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- HEADER -->
+	<header id="header">
+		<div class="topo linha container">
+			<div id="menu">
+				<button class="botao transparente abrir-fechar-menu">
+					<img class="ativo" src="img/icone/nav-bar.svg">
+					<img class="fechar" src="img/icone/close-menu.svg">
+				</button>
+
+				<nav class="menu-hamburguer">
+						<ul id="menu-usuario">
+							<li><a href="#">Cadastre-se</a></li>
+							<li><a href="#">Entrar</a></li>
+							<li><a href="#">Vender</a></li>
+						</ul>
+							<div class="divisor menu"></div>
+						<ul id="menu-ajuda">
+							<li><a href="#">Ajuda</a></li>
+							<li><a href="#">Contato</a></li>
+							<li><a href="#">Sobre</a></li>
+						</ul>
+				</nav>
+			</div>
+
+			<div id="logo">
+				<a href="index.html">
+					<h1>Fibra tecidos</h1>
+				</a>
+			</div>
+		</div>
+		<div class="bg-branco"></div>
+	</header>
+
+	<!-- SLIDER -->
+	<section id="slider">
+
+		<div id="slides" class="linha">
+			<div class="slide active" data-slide=0>
+				<a href="#">
+					<img src="img/slide1.jpg">
+				</a>
+			</div>
+			<div class="slide" data-slide=1>
+				<a href="#">
+					<img src="img/slide2.jpg">
+				</a>
+			</div>
+			<div class="slide" data-slide=2>
+				<a href="#">
+					<img src="img/slide3.jpg">
+				</a>
+			</div>
+		</div>
+
+		<nav class="setas">
+			<button class="botao transparente seta esquerda">
+				<i class="fa fa-angle-left" aria-hidden="true"></i>
+			</button>
+			<button class="botao transparente seta direita">
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+			</button>
+		</nav>
+
+		<div class="bullets container">
+			<ul class="linha">
+				<!-- COLOCAR BULLETS AQUI (JS) -->
+			</ul>
+		</div>
+	</section>
+
+  <main id="caracteristica-tecido" class="container">
+    <div class="align-center space-between">
+      <div class="especificacoes">
+        <h2>Nome do tecido</h2>
+      </div>
+      <div class="preco">
+        <p>R$ 260,00</p>
+      </div>
+    </div>
+    <div class="informacoes-tecido">
+      <p class="dado-tecido">Categoria</p>
+      <p class="dado-tecido">Composição</p>
+      <div class="medidas align-center">
+        <p class="dado-tecido">Comprimento</p>
+        <img class="separacao-dados" src="img/icone/close-menu.svg" alt="">
+        <p class="dado-tecido">Largura</p>
+      </div>
+      <p class="dado-tecido">Gramatura</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+	<footer id="footer" class="align-center">
+		<div class="container align-center space-between">
+			<ul id="menu-footer">
+				<li><a href="#">Ajuda</a></li>
+				<li><a href="#">Contato</a></li>
+				<li><a href="#">Sobre</a></li>
+			</ul>
+			<div class="redes-sociais align-center space-between container">
+				<a href="https://www.facebook.com/fibratecido/" target="_blank">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.instagram.com/fibratecido/" target="_blank">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

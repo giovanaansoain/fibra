@@ -411,9 +411,15 @@ img.fechar.ativo {
 .botao.transparente.add-medida img {
   width: 20px;
   height: 20px;
-  border-radius: 45px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
   padding: 5px;
+}
+
+.botao.transparente.remove-medida img.inativo {
+	display: none;
+}
+
+.botao.transparente.remove-medida img.ativo {
+	display: block;
 }
 
 .opcao span {
@@ -574,6 +580,22 @@ img.fechar.ativo {
 	font-weight: 300;
 	color: #808080;
 	margin-top: 5px;
+}
+
+.informacoes-tecido {
+  color: #808080;
+  font-size: 0.938em;
+  font-weight: 300;
+}
+
+p.dado-tecido {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+img.separacao-dados {
+  height: 16px;
+	margin: 0 10px;
 }
 
 .redes-sociais {
