@@ -582,20 +582,71 @@ img.fechar.ativo {
 	margin-top: 5px;
 }
 
+.topo-tecido {
+	margin: 20px 0;
+}
+
+.topo-tecido .especificacoes h2,
+.topo-tecido .preco p {
+  margin: 0;
+}
+
 .informacoes-tecido {
   color: #808080;
   font-size: 0.938em;
   font-weight: 300;
 }
 
+.itens-tecido {
+	margin-bottom: 20px;
+}
+
+.itens-tecido.dimensoes .medidas p {
+	margin: 0;
+}
+
 p.dado-tecido {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 img.separacao-dados {
-  height: 16px;
-	margin: 0 10px;
+	height: 14px;
+  margin: 0 5px;
+}
+
+.icones {
+	flex-wrap: wrap;
+	padding-top: 14px;
+}
+
+.icone {
+	width: 40px;
+	height: 40px;
+	background: rgba(238, 238, 238, 0.2);
+	border-radius: 45px;
+	margin-right: 14px;
+	margin-bottom: 14px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.divisor.secao.tecidos {
+	margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  height: 1px;
+  background-color: #c6c6c6;
+}
+
+.sugestoes-uso .imagem-colecao img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.botao.inteiro.negociar,
+.botao.inteiro.comprar {
+	width: 48%;
 }
 
 .redes-sociais {
@@ -644,12 +695,12 @@ img.separacao-dados {
 	}
 
 	.bullets ul {
-	    margin: 0;
+    margin: 0;
 	}
 
 	.divisor.secao {
-	    margin-top: 64px;
-	    margin-bottom: 32px;
+    margin-top: 64px;
+    margin-bottom: 32px;
 	}
 
 	#search {
