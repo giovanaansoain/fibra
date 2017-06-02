@@ -589,7 +589,12 @@ img.fechar.ativo {
 .topo-tecido .especificacoes h2,
 .topo-tecido .preco p {
   margin: 0;
+	font-weight: 300;
 }
+
+/*.topo-tecido .especificacoes h2 {
+  font-weight: 300;
+}*/
 
 .informacoes-tecido {
   color: #808080;
@@ -637,6 +642,13 @@ img.separacao-dados {
   width: 90%;
   height: 1px;
   background-color: #c6c6c6;
+}
+
+.sugestoes-uso .informacoes-tecido p {
+	color: #808080;
+	font-size: 0.938em;
+	font-weight: 300;
+	line-height: 1.5em;
 }
 
 .sugestoes-uso .imagem-colecao img {
